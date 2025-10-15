@@ -39,7 +39,7 @@ const HomeHeader = () => {
               className={`px-6 py-2 rounded-full font-medium transition-all duration-300 ${
                 !isNeedingMentor
                   ? 'bg-blue-600 text-white shadow-lg shadow-blue-600/50'
-                  : 'bg-gray-800 text-gray-400 hover:bg-gray-700'
+                  : 'bg-pink-800 text-gray-400 hover:bg-gray-700'
               }`}
             >
               I want to mentor
