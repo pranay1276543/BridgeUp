@@ -73,7 +73,7 @@ const StruggleSection = () => {
 
           {/* Card 2: High Cost (Yellow/Gold Theme) */}
           <div className="p-8 rounded-xl shadow-2xl bg-gray-800 border-t-4 border-yellow-600 transition-transform transform hover:scale-[1.03] duration-300">
-            <h3 className="text-5xl font-extrabold mb-4 text-yellow-500">$50</h3>
+            <h3 className="text-5xl font-extrabold mb-4 text-yellow-500">3000 Rupees</h3>
             <p className="text-sm font-semibold uppercase tracking-wide mb-4 text-yellow-200">average tutoring cost</p>
             <p className="text-base text-gray-300">
               per hour makes personalized academic help unaffordable for most students.

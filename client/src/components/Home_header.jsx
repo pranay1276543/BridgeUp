@@ -1,8 +1,10 @@
 import React, { useState, useContext } from 'react'; // 1. ADD useContext to React import
 import { assets } from '../assets/assets.js'; 
 import { AppContext } from '../context/AppContext'; // 2. CHANGE to import AppContext (raw object)
+import { Navigate, useNavigate } from 'react-router-dom';
 
 const HomeHeader = () => {
+    const navigate = useNavigate()
     // 3. Use useContext and pass the AppContext object to it
     const { isNeedingMentor, setIsNeedingMentor } = useContext(AppContext);
  
@@ -25,7 +27,8 @@ const HomeHeader = () => {
           {/* Role Selection Buttons */}
           <div className="flex space-x-2 mb-16 justify-center lg:justify-start">
             <button
-              onClick={() => setIsNeedingMentor(true)} // USE context setter
+              onClick={() => {setIsNeedingMentor(true)
+}} // USE context setter
               className={`px-6 py-2 rounded-full font-medium transition-all duration-300 ${
                 isNeedingMentor
                   ? 'bg-blue-600 text-white shadow-lg shadow-blue-600/50'
@@ -61,7 +64,8 @@ const HomeHeader = () => {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 mb-8 justify-center lg:justify-start">
-                <button className="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg shadow-xl transition-transform transform hover:-translate-y-0.5">
+                <button className="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg shadow-xl transition-transform transform hover:-translate-y-0.5"
+                        onClick={()=>navigate('/register-login')}>
                   { isNeedingMentor? "Find Your Mentor":"Answer Question  "}
                 </button>
                 <button className="px-8 py-3 bg-gray-800 hover:bg-gray-700 text-gray-300 border border-gray-700 font-semibold rounded-lg transition-transform transform hover:-translate-y-0.5">
